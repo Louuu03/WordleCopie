@@ -1,0 +1,30 @@
+.settings{
+    position: relative;
+    float: right;
+    width: 250px;
+    height: 100%;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.584);
+    margin-top: 3px;
+    text-align: right;
+    padding-left: 10px;
+/*     display: none; */
+}
+.settings h2{
+        width: auto;
+        display: inline-block;
+        padding-right: 15px;
+}
+.settings p{
+    padding-right: 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+.titleR img{
+    width: 23px;
+    float: left;
+    margin: 25px;
+    cursor: pointer;
+}
+.settings p:hover{
+    background-color: rgba(128, 128, 128, 0.342);
+}

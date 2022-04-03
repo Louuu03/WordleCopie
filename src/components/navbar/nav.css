@@ -1,0 +1,36 @@
+.nav{
+    height: 60px;
+    position: relative;
+
+    box-shadow:  1px 1px 5px rgba(0, 0, 0, 0.692);
+}
+.nav img{
+    width: 23px;
+    margin: 0 5px;
+    cursor: pointer;
+    z-index: 50;
+}
+.icon{
+    width: 70px;
+}
+.iconL{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    float: left;
+    margin-left: 10px ;
+
+}
+.iconR{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    float: right;
+}
+.mid{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    line-height: 15px;
+}
