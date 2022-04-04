@@ -1,0 +1,50 @@
+.keyboard{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.centerK{
+width: auto;
+}
+.row{
+    display: flex;
+    justify-content: center;
+    width: 450px;
+    height: auto;
+    margin-top: 5px;
+}
+.last{
+    margin-bottom: 10px;
+}
+.letter{
+    border-radius: 5px;
+    width: 40px;
+    margin: 0 3px;
+    height: 55px;
+    line-height: 55px;
+    background-color: rgba(0, 0, 0, 0.153);
+    cursor: pointer;
+}
+.enter, .back{
+    background-color: rgba(0, 0, 0, 0.153);
+    cursor: pointer;
+    border-radius: 5px;
+    width: 60px;
+    margin: 0 3px;
+    height: 55px;
+}
+.enter{
+    line-height: 55px;
+}
+.back{
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+}
+.back img{
+    padding-top: 5px;
+    width: 35px;
+    height: auto;
+}
