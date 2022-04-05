@@ -3,28 +3,32 @@ import './main.css';
 
 export function Main (props){
     let lines=[];
-    let inside=[];
+    let inside=[[],[],[],[],[],[]];
     const rows=['RA','RB','RC','RD','RE','RF'];
     const columns=['a','b','c','d','e'];
+    const A0=props.A0;
+    const A1=props.A1;
+    const A2=props.A2;
+    const A3=props.A3;
+    const A4=props.A4;
+    const A5=props.A5;
+    const ans=[A0,A1,A2,A3,A4,A5];
     
-    for(let j=0; j<5;j++){
-            inside.push(<div className={columns[j]} ></div>)
+    for(let i=0; i<6;i++){
+        for(let j=0; j<5;j++){
+                inside[i].push(<div className={columns[j]}>
+                    {ans[i][j]}
+                </div>)
+        }
     }
+
     for(let i=0; i<6;i++){
         lines.push(
         <div className={rows[i]}>
-            {inside}
+            {inside[i]}
         </div>
         )
     }
-
-    const input=props.input;
-    const setInput=props.setInput;
-    const row=props.row;
-    const setRow=props.setRow;
-    const col=props.col;
-    const setCol=props.setCol;
-
 
     return(
         <div className="main">
@@ -33,7 +37,4 @@ export function Main (props){
             </div>
         </div>
     )
-
-
-
 }
