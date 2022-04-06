@@ -35,19 +35,9 @@ export function Keyboard(props){
     const setRow=props.setRow;
     const col=props.col;
     const setCol=props.setCol;
-    const typeAni={
-        0:[],
-        1:[],
-        2:[],
-        3:[],
-        4:[],
-        5:[],
-    }
-
     function type(col,row){
         if(col===0){
             setAns[row](prev=>[input]);
-
         }else if(col<5){
         setAns[row](prev=>[...prev,input]);
         }
