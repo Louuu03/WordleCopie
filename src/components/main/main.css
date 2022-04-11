@@ -30,6 +30,15 @@
     animation-duration: 0.3s;
     animation-name: typed;
 }
+.green{
+    background-color: rgb(106, 183, 106);
+}
+.orange{
+    background-color: rgb(255, 200, 99);
+}
+.gray{
+    background-color: rgb(204, 204, 204);
+}
 @keyframes typed{
     0%{transform: scale(1);}
     20%{transform: scale(0.9);}

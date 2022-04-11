@@ -1,4 +1,4 @@
-import React, {useState, createContext, useEffect} from 'react';
+import React, {useState, createContext} from 'react';
 import './App.css';
 import {Nav} from './components/navbar/nav'
 import {Info} from './components/info/info';
@@ -16,42 +16,62 @@ function App() {
   const [col, setCol]=useState(0);
   const [board, setBoard]=useState(insert);
   const [type, setType]=useState(false);
+  const [boardAll, setBoardAll]=useState(board[0]);
+  const [green, setGreen]=useState(['']);
+
+
   const insertLetter=(keyValue)=>{
+    if(col===-1){
+      return;
+    }
     setType(true);
-    const newBoard=[...board];
+    if(col<5){
+        setCol(col+1);
+        const newBoard=[...board];
     newBoard[row][col]=keyValue;
     setBoard(newBoard);
-    if(col<5){
-        setCol(col+1); 
     }
-    
   };
   const onBack=()=>{
-    setType(false);
     const newBoard=[...board];
     newBoard[row][col-1]='';
     setBoard(newBoard);
     if(col<=5 && col!==0){
         setCol(col-1);
+        
     }
   };
+
   const onEnter=()=>{
     if(col!==5){
-      console.log('Not enough letters')
+      console.log('Not enough letters');
     }else{
-     /*  for(let i=0;i<5;i++)
-      if(board[row][i]===correct[i]){
-        
-      }else if(){
-
+      if(row!==0){
+              let newboardAll=[...boardAll];
+              board[row].forEach(col=>col!==''&&newboardAll.push(col));
+              setBoardAll(newboardAll);
+      }
+      const greenwords=[...green];
+      for(let i=0; i<5;i++){
+        if(board[row][i]===correct[i]){
+          if(!green.includes(board[row][i])){
+            greenwords.push(board[row][i]);
+            setGreen(greenwords);
+          }
+        }
+      }
+      if(correct.join('')===board[row].join('')){
+        console.log('hey');
+        setCol(-1);
+        setRow(row+1);
       }else{
-
-      } */
-      setRow(row+1);
-      setCol(0);
-    }
+        setCol(0);
+        setRow(row+1);
+      }
+      
+      
+    } 
   };
- 
 
   return (
     <div className="App">
@@ -62,7 +82,8 @@ function App() {
         col, setCol,
         insertLetter,
         onBack, onEnter,
-        type
+        type,correct,
+        boardAll,green
         }}>
       <List  />
       <Info />

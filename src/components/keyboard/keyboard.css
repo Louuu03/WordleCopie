@@ -50,3 +50,13 @@ width: auto;
     width: 35px;
     height: auto;
 }
+
+.green{
+    background-color: rgb(106, 183, 106);
+}
+.orange{
+    background-color: rgb(255, 200, 99);
+}
+.gray{
+    background-color: rgb(109, 109, 109);
+}

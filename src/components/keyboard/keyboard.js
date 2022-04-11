@@ -53,18 +53,18 @@ export function Keyboard(props){
             <div className="centerK">
                 <div className="first row">
                     {keyboard.first.map(key=>
-                            {return <Keys keyValue={key} />}
+                            {return <Keys keyValue={key} keyRow='first'/>}
                     )}
                 </div>
                 <div className="second row">
                     {keyboard.second.map(key=>
-                            {return <Keys keyValue={key} />}
+                            {return <Keys keyValue={key} keyRow='second' />}
                     )}
                 </div> 
                 <div className="last row">
                     <div className="enter" onClick={onEnter}>ENTER</div>
                     {keyboard.last.map(key=>
-                            {return <Keys keyValue={key} />}
+                            {return <Keys keyValue={key} keyRow='last'/>}
                     )}
                     <div className="back" onClick={onBack}>
                         <img src={require('../icon/backspace.png')} alt="back"/>
