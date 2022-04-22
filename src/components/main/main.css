@@ -44,3 +44,8 @@
     20%{transform: scale(0.9);}
     100%{transform: scale(1);}
 }
+@media only screen and (max-height:750px){
+    .main{
+        margin-top: 10px;
+    }
+}

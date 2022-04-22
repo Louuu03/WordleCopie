@@ -60,3 +60,31 @@ width: auto;
 .gray{
     background-color: rgb(109, 109, 109);
 }
+@media only screen and (max-width:500px) {
+    .keyboard{
+        bottom: 5%;
+    }
+    .row{
+        width: 350px;
+    }
+    .key{
+        width: 30px;
+        margin: 0 2px;
+        height: 35px;
+        font-size: 20px;
+        line-height: 35px;
+    }
+    .enter, .back{
+        width: 45px;
+        margin: 0 2px;
+        height: 35px;
+    }
+    .enter{
+        font-size: 13px;
+        line-height: 35px;
+    }
+    .back img{
+        padding-top: 3px;
+        width: 25px;
+    }
+}

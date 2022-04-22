@@ -1,4 +1,4 @@
-export const correct=['E','L','P','H','Y'];
+export const correct=['T','I','G','E','R'];
 export const insert =[
   ['','','','',''],
   ['','','','',''],

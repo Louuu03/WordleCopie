@@ -2,7 +2,7 @@ import React from "react";
 import './main.css';
 import { Letter } from "./letters";
 
-export function Main (props){
+export function Main (){
     return(
         <div className="main">
             <div className="centerM">

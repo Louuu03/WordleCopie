@@ -1,13 +1,10 @@
 import React, {useState, createContext} from 'react';
 import './App.css';
-import {Nav} from './components/navbar/nav'
-import {Info} from './components/info/info';
-import {List} from './components/list/list';
-import {Settings} from './components/settings/settings';
-import {Stat} from './components/stat/stat';
+import {Nav} from './components/navbar/nav';
 import {Main} from './components/main/main';
 import {Keyboard} from './components/keyboard/keyboard'
 import {correct, insert} from './components/variables';
+import { Finished } from './components/finished';
 
 export const AppContext=createContext();
 
@@ -18,6 +15,7 @@ function App() {
   const [type, setType]=useState(false);
   const [boardAll, setBoardAll]=useState(board[0]);
   const [green, setGreen]=useState(['']);
+  const [gameover, setGameover]= useState(false);
 
 
   const insertLetter=(keyValue)=>{
@@ -64,6 +62,7 @@ function App() {
         console.log('hey');
         setCol(-1);
         setRow(row+1);
+        setGameover(true);
       }else{
         setCol(0);
         setRow(row+1);
@@ -85,12 +84,10 @@ function App() {
         type,correct,
         boardAll,green
         }}>
-      <List  />
-      <Info />
-      <Stat />
-      <Settings />
+      
       <Main  />
-      <Keyboard />
+      {gameover?<Finished row={row} />:<Keyboard />}
+
       </AppContext.Provider>
     </div>
   );
